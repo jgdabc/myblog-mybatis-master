@@ -1,0 +1,39 @@
+server:
+  port:
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/myblog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+    username: root
+    password:
+    hikari:
+      max-lifetime: 500000
+  mail:
+    host: smtp.qq.com
+    username: jgdabc@qq.com
+    password: mgxozkwuibpebhia
+    default-encoding: utf-8
+    protocol: smtp
+    port: 25
+  level:
+    root: info
+    com.star: debug
+  file:
+    name: log/blog-dev.log
+
+
+  redis:
+   host:  # redis远程地址
+    port: 6379
+    database: 0
+    timeout: 1800000
+    lettuce:
+      pool:
+        max-active: 20
+        max-wait: -1
+        max-idle: 5
+        min-idle: 0
+  main:
+    allow-circular-references: true # 允许循环依赖
+
+
